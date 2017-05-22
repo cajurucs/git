@@ -1,0 +1,15 @@
+GIT_SSH_COMMAND="ssh"
+ssh://APKAIXASFELRIIDBKNZA@git-codecommit.us-west-2.amazonaws.com/v1/repos/apiford
+
+
+git status (verifica se há atualizações no git)
+git add . (prepara para subir os arquivos)
+git commit -m (escreve mensagem do push que será feito)
+git pull (recebe os arquivos do servidor)
+git push (sobe os arquivos para o servidor)
+
+
+
+git tag (ve quais e quantas versoes ja teve no projeto)
+git checkout (troca a versão do git)
+git diff versao1 versao2 (compara diferenças entre versao)
