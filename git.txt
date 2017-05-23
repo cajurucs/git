@@ -8,8 +8,24 @@ git commit -m (escreve mensagem do push que será feito)
 git pull (recebe os arquivos do servidor)
 git push (sobe os arquivos para o servidor)
 
+git checkout -b CNT (cria a branch nova e já seleciona ela para trabalhar)
+git merge CNT (pega os commits da branch criada e da um merge na branch selecionada (master))
 
+Em vez de atualizar o master e ficar fazendo merge toda hora, é melhor trazer as modificações do master para o branch usado
+git rebase master CNT
+Depois que a brach CNT estiver atualizada, trazer as modificações dela para a master, para evitar problemas no branch original
+git merge CNT
+
+Caso queira desfazer uma mofificação num arquivo para como ele estava antes do último commit e ainda não foi feito o commit
+git checkout NOMEDOARQUIVO
+Caso o arquivo já tenha tido dado o commit mas ainda não o push
+git reset HEAD NOMEDOARQUIVO
+E depois fazer o checkout que funcionará
 
 git tag (ve quais e quantas versoes ja teve no projeto)
 git checkout (troca a versão do git)
 git diff versao1 versao2 (compara diferenças entre versao)
+
+Caso 2 usuarios mexam na mesma linha, o GIT não consegue fazer o merge
+Precisando assim, excluir as linhas indesejadas (head, hash e a msg incorreta ou antiga)
+Depois basta fazer o commit e o push
